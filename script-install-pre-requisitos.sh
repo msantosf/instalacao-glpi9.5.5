@@ -31,30 +31,3 @@ echo "#################### INICIO INSTALAÇÃO DE REQUIISITOS ##################
 sudo apt install -y zip
 sudo apt install -y bzip2
 echo "#################### FIM INSTALAÇÃO REQUISITOS ADC ####################"
-
-### CRIAR USUÁRIO COM PERMISSÇAO DE ADMIN NO BANCO
-
-#sudo mariadb
-# use mysql;
-#CREATE USER 'admin'@'localhost' IDENTIFIED BY 'm0g4m9lx';
-#GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
-#FLUSH PRIVILEGES;
-
-### FAZER DOWNLOAD GLPI
-# tar -zxvf 
-
-### [opcional] ALTERAR /etc/apache2/sites-available/000-default.conf E FORÇAR QUE O SERVIDOR VIRTUAL FIQUE AO ACESSAR DIRETAMENTE O IP, AO INVÉS DA PASTA html
-
-###### CASO SEJA ATUALIZAÇÃO - EXECUTAR OS SEGUINTES COMANDOS
-
-## >>> FAZENDO BACKUP BASE ANTIGA:
-#	mysqldump -u admin -p nome_do_banco > /home/user/backup_banco.sql
-
-## >>> RESTAURANDO O BACKUP NA BASE NOVA
-#	mysql -u admin -p noma_base_zerada < backup_banco.sql
-
-
-## EM SEGUIDA INICIAR A ATUALIZAÇÃO DO GLPI
-
-## POR FIM COPIAR A PASTA /var/www/glpi/files PARA A NOVA INSTALAÇÃO. 
-# OBSERVAÇÃO: copiar pastas uma por uma utilizando o WinSCP, não tentar copiar todas ao mesmo tempo
